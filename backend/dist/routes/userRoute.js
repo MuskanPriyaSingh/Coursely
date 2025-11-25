@@ -1,9 +1,7 @@
 import express from "express";
 import { register, login, logout, purchasedCourses, getReferralData, changePassword, getCreditHistory } from "../controllers/userController.js";
 import { verifyUserToken } from "../middleware/userMiddleware.js";
-
 const router = express.Router();
-
 router.post("/register", register);
 router.post("/login", login);
 router.get("/logout", logout);
@@ -11,6 +9,4 @@ router.post("/forgot-password", changePassword);
 router.get("/purchases", verifyUserToken, purchasedCourses);
 router.get("/referral-details", verifyUserToken, getReferralData);
 router.get("/credits-history", verifyUserToken, getCreditHistory);
-
-
 export default router;

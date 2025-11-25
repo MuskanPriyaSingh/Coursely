@@ -2,15 +2,11 @@ import express from "express";
 import { verifyAdminToken } from "../middleware/adminMiddleware.js";
 import { verifyUserToken } from "../middleware/userMiddleware.js";
 import { courseDetails, createCourse, deleteCourse, getCourses, makePurchase, updateCourse } from "../controllers/courseController.js";
-
 const router = express.Router();
-
 router.post("/create", verifyAdminToken, createCourse);
 router.put("/:courseId", verifyAdminToken, updateCourse);
 router.delete("/:courseId", verifyAdminToken, deleteCourse);
 router.get("/", getCourses);
 router.get("/:courseId", courseDetails);
-
 router.post("/purchase/:courseId", verifyUserToken, makePurchase);
-
 export default router;
