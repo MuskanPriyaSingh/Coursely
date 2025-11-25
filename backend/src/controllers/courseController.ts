@@ -1,11 +1,11 @@
 import { Request, Response } from "express";
-import { Course } from "../models/Course.ts";
-import { Purchase } from "../models/Purchase.ts";
-import { User } from "../models/User.ts";
-import { Referral } from "../models/Referral.ts";
-import { CreditTransaction } from "../models/creditTransaction.ts";  
-import { CustomRequest as adminRequest } from "../middleware/adminMiddleware.ts";
-import { CustomRequest as userRequest } from "../middleware/userMiddleware.ts";
+import { Course } from "../models/Course.js";
+import { Purchase } from "../models/Purchase.js";
+import { User } from "../models/User.js";
+import { Referral } from "../models/Referral.js";
+import { CreditTransaction } from "../models/creditTransaction.js";  
+import { CustomRequest as adminRequest } from "../middleware/adminMiddleware.js";
+import { CustomRequest as userRequest } from "../middleware/userMiddleware.js";
 import { v2 as cloudinary } from "cloudinary";
 
 // Create a course

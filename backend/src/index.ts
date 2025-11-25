@@ -4,9 +4,9 @@ import cors from 'cors';
 import { connectDB } from './config/db.js';
 import{v2 as cloudinary} from "cloudinary";
 import fileUpload from 'express-fileupload';
-import userRoute from './routes/userRoute.ts';
-import adminRoute from './routes/adminRoute.ts';
-import courseRoute from './routes/courseRoute.ts';
+import userRoute from './routes/userRoute.js';
+import adminRoute from './routes/adminRoute.js';
+import courseRoute from './routes/courseRoute.js';
 
 dotenv.config();
 

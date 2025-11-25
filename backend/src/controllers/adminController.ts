@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
-import { Admin } from "../models/Admin.ts";
+import { Admin } from "../models/Admin.js";
 import { CookieOptions } from "express";
 
 const JWT_SECRET = process.env.JWT_SECRET || "jwtsecret"; 

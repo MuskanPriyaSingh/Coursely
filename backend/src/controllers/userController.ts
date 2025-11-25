@@ -1,13 +1,13 @@
 import { Request, Response } from "express";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
-import { User } from "../models/User.ts";
-import { Referral } from "../models/Referral.ts";
-import { Purchase } from "../models/Purchase.ts";
-import { Course } from "../models/Course.ts";
+import { User } from "../models/User.js";
+import { Referral } from "../models/Referral.js";
+import { Purchase } from "../models/Purchase.js";
+import { Course } from "../models/Course.js";
 import { CookieOptions } from "express";
-import { CustomRequest as userRequest} from "../middleware/userMiddleware.ts";
-import { CreditTransaction } from "../models/creditTransaction.ts";
+import { CustomRequest as userRequest} from "../middleware/userMiddleware.js";
+import { CreditTransaction } from "../models/creditTransaction.js";
 
 const JWT_SECRET = process.env.JWT_SECRET || "jwtsecret"; 
 
