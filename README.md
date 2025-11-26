@@ -1,21 +1,5 @@
-# 🎓 Coursely – Course Selling Platform
-
-<p align="center"> 
-    <img src="public/logo.png" alt="Coursely Logo" width="150" height="150" style="border-radius: 15px;" /> 
-</p> 
-<p align="center"> <strong>A fully modern, responsive, secure, full-stack course selling platform.</strong> </p>
-
-## 📸 Preview Screenshots
-
-<p align="center"> 
-    <img src="screenshots/homepage.png" alt="Coursely Homepage" width="700" /> 
-</p> 
-<p align="center"> 
-    <img src="screenshots/user.png" alt="User Dashboard" width="700" /> 
-</p> 
-<p align="center"> 
-    <img src="screenshots/admin.png" alt="Admin Dashboard" width="700" /> 
-</p>
+# 🎓 Coursely – Online Learning Platform
+A complete and responsive web platform for selling courses with user/admin authentication, purchases, referral system, and dashboard analytics.
 
 ## ✨ Features
 
@@ -34,6 +18,29 @@
 - Create new courses
 - Update/Delete courses only if created by that admin
 - Manage course inventory
+
+## 🖼️ Project Screenshots
+
+> Below are some UI previews of the Coursely platform.
+
+### 🔹 Homepage
+![Homepage](./screenshots/homepage.png)
+
+### 🔹 User Page
+![Courses](./screenshots/user.png)
+
+### 🔹 Purchase Page
+![Purchase](./screenshots/purchase.png)
+
+### 🔹My Courses Page
+![Credits](./screenshots/my-courses.png)
+
+### 🔹 Credit History
+![Credits](./screenshots/credits.png)
+
+### 🔹 Admin Dashboard
+![Admin Dashboard](./screenshots/admin.png)
+
 
 ## 🧰 Tech Stack
 
@@ -119,34 +126,34 @@ NEXT_PUBLIC_API_URL=https://your-backend.onrender.com/api/v1
 
 | Method     |	      Endpoint                     |        Description                     |
 |------------|-------------------------------------|----------------------------------------|
-| POST       |  /admin/register                    |   Register a new admin                 |
-| POST       |  /admin/login                       |   Authenticate and login admin         |
-| GET        |  /admin/logout                      |   Logout admin                         |
-| POST       |  /admin/forgot-password             |   Change forgot password               |
+| POST       |  /api/v1/admin/register             |   Register a new admin                 |
+| POST       |  /api/v1/admin/login                |   Authenticate and login admin         |
+| GET        |  /api/v1/admin/logout               |   Logout admin                         |
+| POST       |  /api/v1/admin/forgot-password      |   Change forgot password               |
 
 ### 👨‍🎓 User Routes
 
 | Method     |	      Endpoint                     |        Description                     |
 |------------|-------------------------------------|----------------------------------------|
-| POST       |  /user/register                     |   Register a new user                  |
-| POST       |  /user/login                        |   Authenticate and login user          |
-| GET        |  /user/logout                       |   Logout user                          |
-| POST       |  /user/forgot-password              |   Change forgot password               |
-| GET        |  /user/purchases                    |   Fetch user purchased courses         |
-| GET        |  /user/referral-details             |   View referral status                 |
-| GET        |  /user/credits-history              |   View credit transactions             |
+| POST       |  /api/v1/user/register              |   Register a new user                  |
+| POST       |  /api/v1/user/login                 |   Authenticate and login user          |
+| GET        |  /api/v1/user/logout                |   Logout user                          |
+| POST       |  /api/v1/user/forgot-password       |   Change forgot password               |
+| GET        |  /api/v1/user/purchases             |   Fetch user purchased courses         |
+| GET        |  /api/v1/user/referral-details      |   View referral status                 |
+| GET        |  /api/v1/user/credits-history       |   View credit transactions             |
             
 
 ### 📚 Course Routes
 
 | Method     |	      Endpoint                     |        Description                        |
 |------------|-------------------------------------|-------------------------------------------|
-| POST       |  /course/create                     |   Create course (Admin only)              |
-| PUT        |  /course/:courseId                  |   Update course (Admin + must be creator) |
-| DELETE     |  /course/:courseId                  |   Delete course (Admin + must be creator) |
-| GET        |  /course                            |   Get all courses                         |
-| GET        |  /course/:courseId                  |   Get course details                      |
-| POST       |  /course/purchase/:courseId         |   Purchase a course                       |
+| POST       |  /api/v1/course/create              |   Create course (Admin only)              |
+| PUT        |  /api/v1/course/:courseId           |   Update course (Admin + must be creator) |
+| DELETE     |  /api/v1/course/:courseId           |   Delete course (Admin + must be creator) |
+| GET        |  /api/v1/course                     |   Get all courses                         |
+| GET        |  /api/v1/course/:courseId           |   Get course details                      |
+| POST       |  /api/v1/course/purchase/:courseId  |   Purchase a course                       |
 
 ## 🏛 Architecture
 
@@ -168,7 +175,9 @@ coursely/
 |   │    ├── api.ts (Axios instance)
 |   │    ├── store.ts (Zustand store)
 |   └── public/
-│
+|
+│── screenshots/
+|
 └── README.md        
 ```
 
@@ -218,7 +227,7 @@ Zustand handles in-page state:
 
 ## ☁️ Deployment
 
-- **Frontend**: [Vercel](https://coursely-1nwyap5lc-muskan-priyas-projects.vercel.app)
+- **Frontend**: [Vercel](https://coursely-six.vercel.app)
 - **Backend**: [Render](https://coursely-q8qo.onrender.com)
 
 ## 🏁 Final Notes
@@ -234,4 +243,9 @@ Possible future upgrades:
 - Course progress tracking
 - Leaderboards & badges
 
+## 👩 Author
+
+Muskan Priya
+
+🌐 Live Project: https://coursely-six.vercel.app
 
